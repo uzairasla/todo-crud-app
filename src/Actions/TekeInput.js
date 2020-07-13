@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import Task from "./Task";
 const TekeInput = () => {
   const [todo, setTodo] = useState([
-    { task: "Hello", id: uuidv4() },
+    { task: "Hello, Enter a todo", id: uuidv4() },
     { task: "Apples are delicious", id: uuidv4() },
   ]);
   const [input, setInput] = useState("");
@@ -28,7 +28,7 @@ const TekeInput = () => {
           placeholder="Enter Todo"
         />
         <Button
-          disbled={!input}
+          disabled={!input ? true : false}
           className="ml-3 w-50"
           variant="contained"
           color="primary"
